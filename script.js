@@ -23,8 +23,7 @@ dragComponents.forEach((component) => {
     e.dataTransfer.setData(
       'text/plain',
       component.getAttribute('data-component-type')
-    );
-    console.log('hmmm', component.getAttribute('data-component-type'));
+    );    
   });
 
   // When drag ends
@@ -59,9 +58,7 @@ dropZone.addEventListener('drop', (e) => {
   }
 
   // Get the component type
-  const componentType = e.dataTransfer.getData('text/plain');
-  console.log('componentType', componentType);
-
+  const componentType = e.dataTransfer.getData('text/plain');  
   if (componentType in componentUITemplates) {
     // Create the component UI based on its type
     const componentUI = document.createElement('div');
