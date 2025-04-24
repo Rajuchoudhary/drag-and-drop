@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop Component Builder</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Drag and Drop <span>Component Builder</span></h1>
+
+    <div class="container">
+      <div class="components-panel">
+        <div
+          class="drag-component"
+          data-component-type="button"
+          draggable="true"
+        >
+          <div class="component-icon">B</div>
+          <div class="component-name">Button</div>
+        </div>
+        <div
+          class="drag-component"
+          data-component-type="image"
+          draggable="true"
+        >
+          <div class="component-icon">I</div>
+          <div class="component-name">Image</div>
+        </div>
+        <div class="drag-component" data-component-type="text" draggable="true">
+          <div class="component-icon">T</div>
+          <div class="component-name">Text Block</div>
+        </div>
+        <div class="drag-component" data-component-type="form" draggable="true">
+          <div class="component-icon">F</div>
+          <div class="component-name">Form Input</div>
+        </div>
+        <div class="drag-component" data-component-type="card" draggable="true">
+          <div class="component-icon">C</div>
+          <div class="component-name">Card</div>
+        </div>
+      </div>
+
+      <div class="drop-zone-container">
+        <div class="drop-zone" id="dropZone">
+          <div
+            style="
+              color: #666;
+              text-align: center;
+              width: 100%;
+              margin-top: 150px;
+            "
+          >
+            Drag components here to build your UI
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="reset-button" id="resetButton">Reset Builder</button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
